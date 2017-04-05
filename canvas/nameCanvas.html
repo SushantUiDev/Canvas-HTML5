@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<center>
+<h2>Name Canvas Demo</h2>
+<hr/>
+<canvas id="myName" width="400" height="400" style="border: 1px solid black"></canvas>
+<canvas id="roundCanvas" width="400" height="400" style="border: 1px solid black"></canvas>
+<canvas id="SCanvas" width="400" height="400" style="border: 1px solid black"></canvas>
+<script type="text/javascript">
+	var c1=document.getElementById("myName");
+	var ctx=c1.getContext("2d");
+    console.log(ctx);
+	/*ctx.moveTo(0,100);
+	ctx.lineTo(400,100);
+	ctx.lineWidth=2;
+	ctx.strokeStyle="red";
+	ctx.stroke();*/
+  
+
+   /* ctx.beginPath();
+	ctx.moveTo(0,300);
+	ctx.lineTo(400,300);
+	ctx.lineWidth=2;
+	ctx.strokeStyle="red";
+	ctx.stroke();*/
+
+    ctx.beginPath();
+	ctx.moveTo(0,300);
+	ctx.lineTo(100,100);
+	ctx.lineWidth=2;
+	ctx.strokeStyle="yellow";
+
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.moveTo(100,100);
+	ctx.lineTo(200,300);
+	ctx.lineWidth=2;
+	ctx.lineJoin="round";
+	ctx.strokeStyle="green";
+	ctx.stroke();
+
+    ctx.beginPath();
+	ctx.moveTo(200,300);
+	ctx.lineTo(300,100);
+	ctx.lineWidth=2;
+	ctx.strokeStyle="green";
+	ctx.stroke();
+
+
+    ctx.beginPath();
+	ctx.moveTo(300,100);
+	ctx.lineTo(400,300);
+	ctx.lineWidth=2;
+	ctx.strokeStyle="green";
+	ctx.stroke();
+
+	/* 2nd canvas */
+	var c2=document.getElementById("roundCanvas");
+	console.log(c2);
+	var ctx1=c2.getContext("2d");
+    console.log(ctx1);
+	ctx1.moveTo(0,300);
+	ctx1.lineTo(100,100);
+	ctx1.lineTo(200,300);
+	ctx1.lineTo(300,100);
+	ctx1.lineTo(400,300);
+	ctx1.lineJoin="baval";
+	ctx1.lineWidth=12;
+	ctx1.strokeStyle="yellow";
+	ctx1.stroke();
+
+	/* 3rd canvas */
+
+	var c3=document.getElementById("SCanvas");
+	console.log(c3);
+	var ctx3=c3.getContext("2d");
+	console.log(ctx3);
+	ctx3.lineJoin="round";
+	ctx3.moveTo(300,100);
+	ctx3.lineTo(100,100);
+	ctx3.lineTo(100,200);
+	ctx3.lineTo(300,200);
+	ctx3.lineTo(300,300);
+	ctx3.lineTo(300,300);
+	ctx3.lineWidth=20 ;
+	ctx3.strokeStyle="pink";
+	ctx3.stroke();
+
+
+</script>
+</center>
+</body>
+</html>

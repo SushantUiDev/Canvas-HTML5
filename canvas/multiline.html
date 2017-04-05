@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>multiline</title>
+</head>
+
+<body>
+<h2>Canvas Demo in HTML5</h2>
+<hr/>
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid blue;">
+
+</canvas>
+<script type="application/javascript" language="javascript">
+
+var c1=document.getElementById("myCanvas");
+
+var ctx=c1.getContext("2d");
+
+ctx.moveTo(100,100);
+ctx.lineTo(300,100);
+ctx.lineTo(300,200);
+ctx.lineTo(100,200);
+ctx.lineTo(100,100);
+ctx.lineJoin="round";
+ctx.lineWidth="10";
+ctx.strokeStyle="red";
+ctx.lineCap="round";
+ctx.stroke();
+
+
+</script>
+</body>
+</html>
