@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<canvas id="canvas" width="500" height="400" style="border: 1px solid blue;"></canvas>
+<button id="btn1" value="Click" onclick="draw(0,0)">ClickMe</button>
+<script type="text/javascript">
+	function draw(x,y){
+		var canvas=document.getElementById("canvas");
+		var ctx=canvas.getContext("2d");
+        ctx.save();                          //save the canvas state if required
+        ctx.clearRect(0,0,500,400);            //clear the canvas for redrawing
+		ctx.fillStyle="red";                //set color to rect as red
+		ctx.fillRect(x,0,50,50);            //create rect
+		//ctx.fill();                       //main method t create rect
+        ctx.restore();                     //restore the canvas state 
+        x+=3;      //increament x value
+        var loopTimer=setTimeout('draw('+x+','+y+')',30);
+	}
+</script>
+</body>
+</html>

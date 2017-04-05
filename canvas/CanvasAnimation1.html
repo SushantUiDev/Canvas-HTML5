@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<canvas id="myRect" width="500" height="500" style="border:1px solid blue" ></canvas>
+<script type="text/javascript">
+	var c1=document.getElementById("myRect");
+	var ctx=c1.getContext("2d");
+	console.log(ctx);
+
+	ctx.fillStyle="red";
+	ctx.fillRect(0,0,50,50);
+	ctx.strokeRect(50,50,50,50);
+
+</script>
+</body>
+</html>
