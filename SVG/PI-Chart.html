@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<svg id="pi_chart" width="600" height="400" style="border: 2px solid blue;">
+<rect id="rect1" x="100" y="50" width="50" height="400" style="stroke: black ; stroke-width: 4; fill: gray;"/>	
+<rect id="rect2" x="200" y="100" width="50" height="400" style="stroke: black ; stroke-width: 4; fill: gray;"/>
+<rect id="rect3" x="300" y="50" width="50" height="400" style="stroke: black ; stroke-width: 4; fill: gray;"/>
+<rect id="rect4" x="400" y="250" width="50" height="400" style="stroke: black ; stroke-width: 4; fill: gray;"/>
+
+<animate
+   xlink:href="#rect1"
+   attributeName="y"
+   from="400"
+   to="100"
+   begin="0s"
+   dur="5s"
+   repearDur="01:30"
+   repeatCount="infinite"
+
+/>
+
+<animate
+   xlink:href="#rect2"
+   attributeName="y"
+   from="400"
+   to="100"
+   begin="1s"
+   dur="5s"
+   repearDur="01:30"
+   repeatCount="infinite"
+
+/>
+</svg>
+</body>
+</html>
