@@ -4,8 +4,17 @@
 	<title></title>
 </head>
 <body>
+
 <svg id="pi_chart" width="600" height="400" style="border: 2px solid blue;">
-<rect id="rect1" x="100" y="50" width="50" height="400" style="stroke: black ; stroke-width: 4; fill: gray;"/>	
+<defs>
+	<linearGradient id="linearGradient01" x1="0%" y1="0%" x2="100%" y2="100%">
+	    <stop offset="20%" stop-color="pink"/>
+	    <stop offset="30%" stop-color="red"/>
+	    <stop offset="70%" stop-color="blue"/>
+		
+	</linearGradient>
+</defs>
+<rect id="rect1" x="100" y="50" width="50" height="400" fill="url(#linearGradient01)" style="stroke: black ; stroke-width: 4;"/>	
 <rect id="rect2" x="200" y="100" width="50" height="400" style="stroke: black ; stroke-width: 4; fill: gray;"/>
 <rect id="rect3" x="300" y="50" width="50" height="400" style="stroke: black ; stroke-width: 4; fill: gray;"/>
 <rect id="rect4" x="400" y="250" width="50" height="400" style="stroke: black ; stroke-width: 4; fill: gray;"/>
@@ -17,7 +26,7 @@
    to="100"
    begin="0s"
    dur="5s"
-   repearDur="01:30"
+   repeatDur="01:50"
    repeatCount="infinite"
 
 />
@@ -29,9 +38,21 @@
    to="100"
    begin="1s"
    dur="5s"
-   repearDur="01:30"
+   repeatDur="01:50"
    repeatCount="infinite"
 
+/>
+
+<!-- Animation for Rectangle 3 -->
+<animate 
+    xlink:href="#rect3"
+    attributeName="y"
+    from="400"
+    to="100"
+    begin="0s"
+    dur="5s"
+    repeatDur="01:50"
+    repeatCount="infinite"
 />
 </svg>
 </body>
